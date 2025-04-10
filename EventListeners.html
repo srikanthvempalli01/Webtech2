@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        /* Centering the button using Flexbox */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f4f4f4; /* Optional background color */
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="date_btn" >Click to get today's date</button>
+
+    <script>
+        let date_btn = document.getElementById("date_btn");
+        date_btn.addEventListener("click", () => {
+            let date = new Date().toDateString(); // Call the function properly
+            alert(date);
+        });
+    </script>
+</body>
+</html>
